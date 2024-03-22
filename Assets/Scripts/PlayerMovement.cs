@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Photon.Pun;
+using Fusion;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
@@ -26,19 +26,15 @@ public class PlayerMovement : MonoBehaviour
 
     Rigidbody rb;
 
-    private PhotonView view;
-
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
-
-        view = GetComponent<PhotonView>();
     }
 
     private void Update()
     {
-        if (view.IsMine)
+        if (HasInputAuthority)
         {
             // Ground check
             grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
@@ -54,9 +50,9 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    public override void FixedUpdateNetwork()
     {
-        if (view.IsMine)
+        if (HasInputAuthority)
         {
             MovePlayer();
         }

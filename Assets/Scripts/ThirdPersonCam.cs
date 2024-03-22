@@ -1,17 +1,16 @@
-using Photon.Pun;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
+using Fusion;
 
-public class ThirdPersonCam : MonoBehaviour
+public class ThirdPersonCam : NetworkBehaviour
 {
     [Header("References")]
     public Transform orientation;
     public Transform player;
     public Transform playerObj;
     public Rigidbody rb;
-    public PhotonView view;
     public CinemachineFreeLook cam;
 
     public float rotationSpeed;
@@ -20,7 +19,7 @@ public class ThirdPersonCam : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        if (view.IsMine)
+        if (HasInputAuthority)
         {
             cam.Priority = 100;
         }
@@ -38,7 +37,7 @@ public class ThirdPersonCam : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        if (inputDir != Vector3.zero && view.IsMine)
+        if (inputDir != Vector3.zero && HasInputAuthority)
             playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
     }
 }
