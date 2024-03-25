@@ -19,11 +19,11 @@ public class ThirdPersonCam : NetworkBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        if (HasInputAuthority)
-        {
-            cam.Priority = 100;
-        }
-        else { cam.Priority = 10; }
+        //if (HasInputAuthority)
+        //{
+        //    cam.Priority = 100;
+        //}
+        //else { cam.Priority = 10; }
     }
 
     private void Update()
@@ -37,7 +37,7 @@ public class ThirdPersonCam : NetworkBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        if (inputDir != Vector3.zero && HasInputAuthority)
+        if (inputDir != Vector3.zero /*&& HasInputAuthority*/)
             playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
     }
 }

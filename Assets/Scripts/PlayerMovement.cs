@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 
-public class PlayerMovement : NetworkBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")]
     public float moveSpeed;
@@ -34,28 +34,32 @@ public class PlayerMovement : NetworkBehaviour
 
     private void Update()
     {
-        if (HasInputAuthority)
-        {
-            // Ground check
-            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        //if (HasInputAuthority)
+        //{
+            
+        //}
 
-            MyInputs();
-            SpeedControl();
+        // Ground check
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-            // Handle drag
-            if (grounded)
-                rb.drag = groundDrag;
-            else
-                rb.drag = 0;
-        }
+        MyInputs();
+        SpeedControl();
+
+        // Handle drag
+        if (grounded)
+            rb.drag = groundDrag;
+        else
+            rb.drag = 0;
     }
 
-    public override void FixedUpdateNetwork()
+    public void FixedUpdate()
     {
-        if (HasInputAuthority)
-        {
-            MovePlayer();
-        }
+        //if (HasInputAuthority)
+        //{
+            
+        //}
+
+        MovePlayer();
     }
 
     private void MyInputs()
