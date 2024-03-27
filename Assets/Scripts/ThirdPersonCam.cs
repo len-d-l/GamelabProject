@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-using Fusion;
+//using Fusion;
 
-public class ThirdPersonCam : NetworkBehaviour
+public class ThirdPersonCam : MonoBehaviour
 {
     [Header("References")]
     public Transform orientation;
