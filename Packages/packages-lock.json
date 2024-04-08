@@ -1,5 +1,14 @@
 {
   "dependencies": {
+    "com.unity.ai.navigation": {
+      "version": "1.1.5",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.modules.ai": "1.0.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.burst": {
       "version": "1.8.8",
       "depth": 1,
@@ -92,7 +101,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.multiplayer.samples.coop": {
-      "version": "file:C:/Users/Len/Downloads/com.unity.multiplayer.samples.coop-main/com.unity.multiplayer.samples.coop-main/Packages/com.unity.multiplayer.samples.coop",
+      "version": "file:C:/Users/pinda/Downloads/com.unity.multiplayer.samples.coop-main/com.unity.multiplayer.samples.coop-main/Packages/com.unity.multiplayer.samples.coop",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -319,7 +328,7 @@
       "url": "https://packages.unity.com"
     },
     "com.veriorpies.parrelsync": {
-      "version": "file:C:/Users/Len/Downloads/ParrelSync-master/ParrelSync-master/ParrelSync",
+      "version": "file:C:/Users/pinda/Downloads/ParrelSync-master/ParrelSync-master/ParrelSync",
       "depth": 0,
       "source": "local",
       "dependencies": {}
