@@ -108,7 +108,7 @@ NavMeshSettings:
     agentTypeID: 0
     agentRadius: 0.5
     agentHeight: 2
-    agentSlope: 45
+    agentSlope: 30
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
@@ -142,6 +142,7 @@ GameObject:
   - component: {fileID: 631788106}
   - component: {fileID: 631788105}
   - component: {fileID: 631788104}
+  - component: {fileID: 631788110}
   m_Layer: 7
   m_Name: Plane
   m_TagString: Untagged
@@ -170,7 +171,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 1482258561}
+  m_Mesh: {fileID: 1248737723}
 --- !u!33 &631788105
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -178,7 +179,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631788103}
-  m_Mesh: {fileID: 1482258561}
+  m_Mesh: {fileID: 1248737723}
 --- !u!23 &631788106
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -405,7 +406,7 @@ MonoBehaviour:
     m_AreaError: 15
   m_PreserveMeshAssetOnDestroy: 0
   assetGuid: 
-  m_Mesh: {fileID: 1482258561}
+  m_Mesh: {fileID: 1248737723}
   m_VersionIndex: 1911
   m_IsSelectable: 1
   m_SelectedFaces: 
@@ -426,6 +427,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &631788110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631788103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a5ac11cc976e418e8d13136b07e1f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_AgentTypeID: 0
+  m_CollectObjects: 0
+  m_Size: {x: 10, y: 10, z: 10}
+  m_Center: {x: 0, y: 2, z: 0}
+  m_LayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_UseGeometry: 0
+  m_DefaultArea: 0
+  m_GenerateLinks: 0
+  m_IgnoreNavMeshAgent: 1
+  m_IgnoreNavMeshObstacle: 1
+  m_OverrideTileSize: 0
+  m_TileSize: 256
+  m_OverrideVoxelSize: 0
+  m_VoxelSize: 0.16666667
+  m_MinRegionArea: 2
+  m_NavMeshData: {fileID: 23800000, guid: c336f71fb028459408c70e5fc62569c0, type: 2}
+  m_BuildHeightMesh: 0
 --- !u!1 &853354779
 GameObject:
   m_ObjectHideFlags: 0
@@ -629,15 +661,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6246044659215628101, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.16675445
+      value: 0.16675444
       objectReference: {fileID: 0}
     - target: {fileID: 6246044659215628101, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.20959924
+      value: 0.20959923
       objectReference: {fileID: 0}
     - target: {fileID: 6246044659215628101, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.03630284
+      value: -0.03630283
       objectReference: {fileID: 0}
     - target: {fileID: 7150081322088065419, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.x
@@ -645,7 +677,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7150081322088065419, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.018937632
+      value: -0.018937634
       objectReference: {fileID: 0}
     - target: {fileID: 8873961194271692196, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: moveSpeed
@@ -653,11 +685,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9198066258862590965, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07860133
+      value: 0.07860134
       objectReference: {fileID: 0}
     - target: {fileID: 9198066258862590965, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.0171117
+      value: -0.017111696
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -782,13 +814,13 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
---- !u!43 &1482258561
+--- !u!43 &1248737723
 Mesh:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-4172
+  m_Name: pb_Mesh-4172(Clone)
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
