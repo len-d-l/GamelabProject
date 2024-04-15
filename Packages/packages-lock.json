@@ -107,7 +107,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.multiplayer.samples.coop": {
-      "version": "file:C:/Users/yanda/Desktop/com.unity.multiplayer.samples.coop-main/Packages/com.unity.multiplayer.samples.coop",
+      "version": "file:C:/Users/Marco/OneDrive/Escritorio/com.unity.multiplayer.samples.coop-main/Packages/com.unity.multiplayer.samples.coop",
       "depth": 0,
       "source": "local",
       "dependencies": {
@@ -334,7 +334,7 @@
       "url": "https://packages.unity.com"
     },
     "com.veriorpies.parrelsync": {
-      "version": "file:C:/Users/yanda/Desktop/ParrelSync-master/ParrelSync",
+      "version": "file:C:/Users/Marco/OneDrive/Escritorio/ParrelSync-master/ParrelSync",
       "depth": 0,
       "source": "local",
       "dependencies": {}
