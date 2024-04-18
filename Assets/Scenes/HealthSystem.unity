@@ -137,9 +137,8 @@ GameObject:
   - component: {fileID: 362566722}
   - component: {fileID: 362566721}
   - component: {fileID: 362566726}
-  - component: {fileID: 362566730}
   - component: {fileID: 362566728}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -303,7 +302,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  health: 100
+  health: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 1
@@ -312,20 +311,6 @@ MonoBehaviour:
   attackRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
---- !u!114 &362566730
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 362566719}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 431d80d8eabf07b47b6c870c127eaada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  attack: 10
 --- !u!1001 &489322576
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -847,9 +832,10 @@ GameObject:
   - component: {fileID: 944345248}
   - component: {fileID: 944345247}
   - component: {fileID: 944345246}
-  - component: {fileID: 944345252}
   - component: {fileID: 944345251}
-  m_Layer: 0
+  - component: {fileID: 944345252}
+  - component: {fileID: 944345253}
+  m_Layer: 3
   m_Name: Capsule
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -986,7 +972,7 @@ MonoBehaviour:
   whatIsPlayer:
     serializedVersion: 2
     m_Bits: 64
-  health: 100
+  health: 10
   walkPoint: {x: 0, y: 0, z: 0}
   walkPointRange: 5
   timeBetweenAttacks: 1
@@ -995,6 +981,33 @@ MonoBehaviour:
   attackRange: 5
   playerInSightRange: 0
   playerInAttackRange: 0
+--- !u!54 &944345253
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 944345245}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &988598235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1005,6 +1018,22 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1854980763824739983, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983332470724169772, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
+      propertyPath: m_Size.x
+      value: 4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983332470724169772, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
+      propertyPath: m_Size.y
+      value: 1.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983332470724169772, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
+      propertyPath: m_Size.z
+      value: 4.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 1983332470724169772, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2041560080670268328, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
@@ -1113,7 +1142,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7150081322088065419, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.08698866
+      value: 0.08698865
       objectReference: {fileID: 0}
     - target: {fileID: 7150081322088065419, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -1121,7 +1150,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7150081322088065419, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.018937634
+      value: -0.018937632
       objectReference: {fileID: 0}
     - target: {fileID: 7314668825732039425, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_Layer
@@ -1149,11 +1178,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9198066258862590965, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.07860134
+      value: 0.07860133
       objectReference: {fileID: 0}
     - target: {fileID: 9198066258862590965, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.017111696
+      value: -0.0171117
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1168,6 +1197,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6213581897068693761, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2118033475}
+    - targetCorrespondingSourceObject: {fileID: 6213581897068693761, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2118033478}
   m_SourcePrefab: {fileID: 100100000, guid: bed0144c1dedcd64ab93c334c4a8c29f, type: 3}
 --- !u!1 &1011821324
 GameObject:
@@ -2209,8 +2241,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.87, y: 1.06, z: 2.56}
+  m_Center: {x: 0, y: -0.42, z: 0}
 --- !u!114 &2118033475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2225,6 +2257,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   attack: 20
+--- !u!114 &2118033478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2118033469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4073a56228e6d0c46b7522d2b9e1b63e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 2
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  damage: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
