@@ -6,7 +6,7 @@ public class EnemyAI : MonoBehaviour
 {
     public UnityEngine.AI.NavMeshAgent agent;
 
-    public Transform player;
+    private GameObject player;
 
     public LayerMask whatIsGround, whatIsPlayer;
 
@@ -28,7 +28,7 @@ public class EnemyAI : MonoBehaviour
 
     private void Awake()
     {
-        player = GameObject.Find("PlayerObj").transform;
+        player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
@@ -70,7 +70,7 @@ public class EnemyAI : MonoBehaviour
 
     private void ChasePlayer()
     {
-        agent.SetDestination(player.position);
+        agent.SetDestination(player.transform.position);
     }
 
     private void AttackPlayer()
@@ -78,7 +78,7 @@ public class EnemyAI : MonoBehaviour
         //Make sure enemy doesn't move
         agent.SetDestination(transform.position);
 
-        transform.LookAt(player);
+        transform.LookAt(player.transform);
 
         if (!alreadyAttacked)
         {

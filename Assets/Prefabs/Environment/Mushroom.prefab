@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 444609507770406252}
   - component: {fileID: 1447731397630568938}
   - component: {fileID: 9155238397773007784}
+  - component: {fileID: 2876442472487460863}
   m_Layer: 0
   m_Name: Mushroom
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: -0.000000013008365, y: 0.8303989, z: 0.000000015991487}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 278.7292, y: 278.7292, z: 278.7292}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,3 +86,25 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2876442472487460863
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2935310605108016751}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 2534964839176971238, guid: e6cacfcaaf388cd4db9833a8edef606c, type: 3}
