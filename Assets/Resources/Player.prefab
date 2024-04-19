@@ -29,8 +29,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1854980763824739983}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08698866, y: 0.21187524, z: -0.018937632, w: 0.9732334}
-  m_LocalPosition: {x: -2.839067, y: 2.4389408, z: -6.2114882}
+  m_LocalRotation: {x: 0.086988665, y: 0.21187524, z: -0.018937636, w: 0.9732334}
+  m_LocalPosition: {x: -2.839067, y: 2.438941, z: -6.2114882}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -247,7 +247,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4146044729607588875}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.07860133, y: 0.21203049, z: -0.0171117, w: 0.9739467}
+  m_LocalRotation: {x: 0.07860134, y: 0.21203049, z: -0.0171117, w: 0.9739467}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -453,7 +453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6088134942546042598}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16675445, y: 0.20959924, z: -0.03630284, w: 0.9627789}
+  m_LocalRotation: {x: 0.16675447, y: 0.20959924, z: -0.03630284, w: 0.9627789}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -732,7 +732,7 @@ Transform:
   m_GameObject: {fileID: 7314668825732039425}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.839067, y: 2.4389408, z: -6.2114882}
+  m_LocalPosition: {x: -2.839067, y: 2.438941, z: -6.2114882}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1028,7 +1028,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8040678368616741451}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.12182471, y: 0.21106005, z: -0.026521526, w: 0.9694891}
+  m_LocalRotation: {x: 0.12182473, y: 0.21106005, z: -0.02652153, w: 0.9694891}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1094,7 +1094,7 @@ GameObject:
   - component: {fileID: 1983332470724169772}
   m_Layer: 0
   m_Name: PlayerObj
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

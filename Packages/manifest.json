@@ -1,13 +1,20 @@
 {
   "dependencies": {
+<<<<<<< HEAD
     "com.unity.2d.sprite": "1.0.0",
+=======
+>>>>>>> CombatTest
     "com.unity.ai.navigation": "1.1.5",
     "com.unity.cinemachine": "2.9.7",
     "com.unity.collab-proxy": "2.3.1",
     "com.unity.ide.rider": "3.0.24",
     "com.unity.ide.visualstudio": "2.0.18",
     "com.unity.ide.vscode": "1.2.5",
+<<<<<<< HEAD
     "com.unity.multiplayer.samples.coop": "file:C:/Users/Kaira/Desktop/com.unity.multiplayer.samples.coop-main/Packages/com.unity.multiplayer.samples.coop",
+=======
+    "com.unity.multiplayer.samples.coop": "file:C:/Users/pinda/Downloads/com.unity.multiplayer.samples.coop-main/com.unity.multiplayer.samples.coop-main/Packages/com.unity.multiplayer.samples.coop",
+>>>>>>> CombatTest
     "com.unity.netcode.gameobjects": "1.8.1",
     "com.unity.nuget.mono-cecil": "1.11.4",
     "com.unity.probuilder": "5.1.1",
@@ -17,7 +24,11 @@
     "com.unity.timeline": "1.7.5",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.9.0",
+<<<<<<< HEAD
     "com.veriorpies.parrelsync": "file:C:/Users/Kaira/Desktop/ParrelSync-master/ParrelSync",
+=======
+    "com.veriorpies.parrelsync": "file:C:/Users/pinda/Downloads/ParrelSync-master/ParrelSync-master/ParrelSync",
+>>>>>>> CombatTest
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
