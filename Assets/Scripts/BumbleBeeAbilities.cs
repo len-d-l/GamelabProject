@@ -1,38 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
 
-public class SpawnFog : MonoBehaviour
+public class BumbleBeeAbilities : MonoBehaviour
 {
-    public ParticleSystem particlePrefab;
-    public float fadeOutTime; // Duration of fade-out effect
+    public GameObject healthPrefab;
+
+    public ParticleSystem pollen;
+
+    public float fadeOutTime;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.F)) // Change KeyCode.Space to the desired button
+        if (Input.GetKeyDown(KeyCode.Q)) // Change KeyCode.Space to the desired button
         {
-            SpawnParticle(Color.green); // Change color as per your requirements
+            SpawnPollen(Color.yellow); // Change color as per your 
+            SpawnHealing();
         }
+    }
 
-        if (Input.GetKey(KeyCode.G)) // Change KeyCode.Space to the desired button
-        {
-            SpawnParticle(Color.blue); // Change color as per your requirements
-        }
-    // Add more conditions for other buttons if needed
-}
-
-    public void SpawnParticle(Color color)
+    public void SpawnPollen(Color color)
     {
-        ParticleSystem particle = Instantiate(particlePrefab, transform.position, Quaternion.identity);
+        ParticleSystem particle = Instantiate(pollen, transform.position, Quaternion.identity);
         var mainModule = particle.main;
         mainModule.startColor = color;
 
         // Start fading out the particle system
         StartCoroutine(FadeOut(particle, fadeOutTime));
     }
-
+    void SpawnHealing()
+    {
+        Instantiate(healthPrefab, transform.position, Quaternion.identity);
+    }
     IEnumerator FadeOut(ParticleSystem particle, float fadeTime)
     {
         float currentTime = 0f;
@@ -61,13 +67,4 @@ public class SpawnFog : MonoBehaviour
         // Destroy the particle system game object
         Destroy(particle.gameObject);
     }
-
-    //private void OnParticleCollision(GameObject other)
-    //{
-    //    if (ParticleSystem.startColor. = Color.yellow)
-    //    {
-    //        other.GetComponent<PlayerStats>().HealPlayer(healAmount);
-    //        Destroy(gameObject);
-    //    }
-    //}
 }
