@@ -11,12 +11,12 @@ public class SpawnFog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F)) // Change KeyCode.Space to the desired button
+        if (Input.GetKey(KeyCode.F)) // Change KeyCode.Space to the desired button
         {
             SpawnParticle(Color.green); // Change color as per your requirements
         }
 
-        if (Input.GetKeyDown(KeyCode.G)) // Change KeyCode.Space to the desired button
+        if (Input.GetKey(KeyCode.G)) // Change KeyCode.Space to the desired button
         {
             SpawnParticle(Color.blue); // Change color as per your requirements
         }

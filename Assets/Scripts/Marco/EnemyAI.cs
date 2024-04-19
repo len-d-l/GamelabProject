@@ -29,6 +29,7 @@ public class EnemyAI : MonoBehaviour
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+
         agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
     }
 
@@ -70,7 +71,10 @@ public class EnemyAI : MonoBehaviour
 
     private void ChasePlayer()
     {
-        agent.SetDestination(player.transform.position);
+        var ffog = GameObject.FindGameObjectWithTag("Fog");
+        if (ffog != null) { agent.SetDestination(ffog.transform.position); }
+
+        else { agent.SetDestination(player.transform.position); }
     }
 
     private void AttackPlayer()
