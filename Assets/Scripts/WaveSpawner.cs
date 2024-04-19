@@ -6,7 +6,7 @@ using TMPro;
 public class WaveSpawner : MonoBehaviour
 {
     public TextMeshProUGUI waveCountText;
-    int waveCount = 1;
+    int waveCount = 0;
     
     public float spawnRate = 1.0f;
     public float timeBetweenWaves = 3.0f;
@@ -42,7 +42,7 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(spawnRate);
         }
 
-        spawnRate -= 0.1f;
+        spawnRate += 0.1f;
         enemyCount += 3;
         waveCount += 1;
 
