@@ -1,9 +1,13 @@
 using UnityEngine;
+using System.Collections;
+
 public class PlayerStats : MonoBehaviour
 {
     [SerializeField] private float maxHealth;
 
     public HealthBar healthBar;
+    public GameObject player;
+    public Renderer rend;
 
     private float currentHealth;
     private void Start()
@@ -20,7 +24,7 @@ public class PlayerStats : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            Die();
+            StartCoroutine(Dead());
         }
     }
     public void TakeDamage(float amount)
@@ -34,8 +38,16 @@ public class PlayerStats : MonoBehaviour
         healthBar.SetSlider(currentHealth);
     }
     private void Die()
+    {   
+    }
+    IEnumerator Dead()
     {
-        Debug.Log("You died!");
-
+        Debug.Log("dead");
+        //player.SetActive(false);
+        yield return new WaitForSeconds(3);
+        Debug.Log("respawn");
+        player.transform.position = new Vector3(129.08f, 6.31f, 59.2f);
+        currentHealth = maxHealth;
+        //player.SetActive(true);
     }
 }
