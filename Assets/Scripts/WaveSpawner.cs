@@ -14,6 +14,8 @@ public class WaveSpawner : MonoBehaviour
     public int enemyCount;
 
     public GameObject enemy;
+    public GameObject enemy2;
+    public GameObject enemy3;
 
     bool waveIsDone = true;
 
@@ -38,6 +40,20 @@ public class WaveSpawner : MonoBehaviour
             {
             Vector3 randoPos = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
             GameObject enemyClone = Instantiate(enemy, this.transform.position + randoPos, Quaternion.identity);
+
+            //    int diceroll = Random.Range(1, 6);
+            //    if (diceroll > 3) 
+            //    {
+            //        Vector3 randoPos2 = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
+            //        GameObject enemy2Clone = Instantiate(enemy2, this.transform.position + randoPos, Quaternion.identity);
+            //    }
+
+            //    int dieroll = Random.Range(1, 12);
+            //    if (dieroll > 7)
+            //    {
+            //        Vector3 randoPos3 = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
+            //        GameObject enemy3Clone = Instantiate(enemy2, this.transform.position + randoPos, Quaternion.identity);
+            //    }
 
             yield return new WaitForSeconds(spawnRate);
         }
