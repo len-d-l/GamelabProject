@@ -1043,9 +1043,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveCountText: {fileID: 452003900}
   spawnRate: 1
-  timeBetweenWaves: 15
+  timeBetweenWaves: 30
   enemyCount: 1
   enemy: {fileID: 7768002795894580856, guid: 75c6d62ed31a4f04ca926f1a820c8b33, type: 3}
+  enemy2: {fileID: 7768002795894580856, guid: 75c6d62ed31a4f04ca926f1a820c8b33, type: 3}
+  enemy3: {fileID: 7768002795894580856, guid: 75c6d62ed31a4f04ca926f1a820c8b33, type: 3}
 --- !u!4 &483695897
 Transform:
   m_ObjectHideFlags: 0

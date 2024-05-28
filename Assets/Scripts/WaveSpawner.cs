@@ -9,7 +9,7 @@ public class WaveSpawner : MonoBehaviour
     int waveCount = 0;
     
     public float spawnRate = 1.0f;
-    public float timeBetweenWaves = 3.0f;
+    public float timeBetweenWaves;
 
     public int enemyCount;
 
@@ -19,6 +19,11 @@ public class WaveSpawner : MonoBehaviour
 
     bool waveIsDone = true;
 
+    private void Start()
+    {
+        enemyCount = 3;
+        StartCoroutine(waveSpawner());
+    }
 
     void Update()
     {
@@ -26,44 +31,53 @@ public class WaveSpawner : MonoBehaviour
 
         if (waveIsDone == true)
         {
-            StartCoroutine(waveSpawner());
+            
+        }
+        else
+        {
+            StopCoroutine(waveSpawner());
         }
     }
 
     IEnumerator waveSpawner()
     {
 
-        waveIsDone = false;
-        
 
+
+        int finalCount;
         for (int i = 0; i < enemyCount; i++)
-            {
+        {
             Vector3 randoPos = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
             GameObject enemyClone = Instantiate(enemy, this.transform.position + randoPos, Quaternion.identity);
 
-            //    int diceroll = Random.Range(1, 6);
-            //    if (diceroll > 3) 
-            //    {
-            //        Vector3 randoPos2 = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
-            //        GameObject enemy2Clone = Instantiate(enemy2, this.transform.position + randoPos, Quaternion.identity);
-            //    }
+            int diceroll = Random.Range(1, 6);
+            if (diceroll > 3)
+            {
+                Vector3 randopos2 = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
+                GameObject enemy2clone = Instantiate(enemy2, this.transform.position + randoPos, Quaternion.identity);
+            }
 
-            //    int dieroll = Random.Range(1, 12);
-            //    if (dieroll > 7)
-            //    {
-            //        Vector3 randoPos3 = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
-            //        GameObject enemy3Clone = Instantiate(enemy2, this.transform.position + randoPos, Quaternion.identity);
-            //    }
-
-            yield return new WaitForSeconds(spawnRate);
+            int dieroll = Random.Range(1, 12);
+            if (dieroll > 7)
+            {
+                Vector3 randopos3 = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
+                GameObject enemy3clone = Instantiate(enemy3, this.transform.position + randoPos, Quaternion.identity);
+            }
+            
+            //finalCount = i + 1;
+            //if ( finalCount == enemyCount) {
+                //waveIsDone = false;
+                //enemyCount += 3;
+            //}
+            yield return new WaitForSeconds(.1f);
         }
 
         spawnRate += 0.1f;
-        enemyCount += 3;
+
         waveCount += 1;
 
         yield return new WaitForSeconds(timeBetweenWaves);
 
-        waveIsDone = true;
+        StartCoroutine(waveSpawner());
     }
 }
