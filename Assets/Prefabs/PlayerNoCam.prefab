@@ -262,7 +262,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4333592905422761390}
   - component: {fileID: 543529794067249503}
-  - component: {fileID: 5809170019892907002}
   m_Layer: 0
   m_Name: PlayerNoCam
   m_TagString: Untagged
@@ -314,22 +313,3 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &5809170019892907002
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8515805883920058521}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294113fc2d905e349a8ad5c7d9cb1668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  groundDrag: 5
-  playerHeight: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  orientation: {fileID: 9204240691833227090}

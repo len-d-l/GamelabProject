@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 215942639139501258}
   m_Layer: 0
   m_Name: Termite 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 6996843388952380337}
-  player: {fileID: 0}
   whatIsGround:
     serializedVersion: 2
     m_Bits: 128
