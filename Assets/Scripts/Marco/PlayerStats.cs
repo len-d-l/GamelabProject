@@ -12,6 +12,7 @@ public class PlayerStats : MonoBehaviour
     private float currentHealth;
     private void Start()
     {
+        healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
         currentHealth = maxHealth;
 
         healthBar.SetSliderMax(maxHealth);
@@ -44,10 +45,11 @@ public class PlayerStats : MonoBehaviour
     {
         Debug.Log("dead");
         //player.SetActive(false);
-        yield return new WaitForSeconds(3);
+        yield return new WaitForSeconds(1);
         Debug.Log("respawn");
         player.transform.position = new Vector3(129.08f, 6.31f, 59.2f);
         currentHealth = maxHealth;
+        healthBar.SetSlider(maxHealth);
         //player.SetActive(true);
     }
 }
