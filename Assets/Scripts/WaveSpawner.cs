@@ -44,7 +44,7 @@ public class WaveSpawner : MonoBehaviour
 
 
 
-        int finalCount;
+        //int finalCount;
         for (int i = 0; i < enemyCount; i++)
         {
             Vector3 randoPos = new Vector3(Random.Range(3, 10), 1, Random.Range(3, 10));
