@@ -28,7 +28,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 8797342532071590442}
   m_Father: {fileID: 698556629076526763}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1229646022542745898
@@ -222,6 +223,37 @@ MonoBehaviour:
   m_CameraActivatedEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!1 &1965098212862567015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8797342532071590442}
+  m_Layer: 6
+  m_Name: ShootPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8797342532071590442
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965098212862567015}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.31, z: 1.162}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 7599111695008626907}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2617221767035022647
 GameObject:
   m_ObjectHideFlags: 0
@@ -445,6 +477,7 @@ GameObject:
   - component: {fileID: 2018229926088631795}
   - component: {fileID: 6162780427653916811}
   - component: {fileID: 2778269996475887624}
+  - component: {fileID: 1998427509208662056}
   m_Layer: 6
   m_Name: PlayerA
   m_TagString: Player
@@ -611,9 +644,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038baccdc4ddaec42bb9cb4260ff8ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  healAmount: 0
-  pollenParticle: {fileID: 0}
+  healAmount: 20
+  pollenParticle: {fileID: 4881293977272286202, guid: 3148610b385d4be408f187e80f9a9cce, type: 3}
+  isReady: 1
+  cooldownTime: 4
   fadeOutTime: 3
+--- !u!114 &1998427509208662056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692245415139038444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98655bdacb4a5924cbefa6cc682277c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  honeyBallPrefab: {fileID: 5023509867703446306, guid: 60a8b3dbdeb4e874588c44ee718c0768, type: 3}
+  shootPoint: {fileID: 8797342532071590442}
+  shootForce: 500
 --- !u!1 &5195322276630948942
 GameObject:
   m_ObjectHideFlags: 0
