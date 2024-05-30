@@ -8,11 +8,21 @@ public class ShootHoney : MonoBehaviour
     public Transform shootPoint;       // Point from which the honey ball will be shot
     public float shootForce = 500f;    // Force with which the honey ball will be shot
 
+    public bool isReady = true;
+    public float cooldownTime = 4f;
+
+    private bool hasFired = false;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.E)) // Assuming left mouse button for shooting
         {
-            ShootHoneyBall();
+            if (isReady == false)
+            {
+                return;
+            }
+
+            StartCoroutine(AbilitySequence());
         }
     }
 
@@ -21,5 +31,19 @@ public class ShootHoney : MonoBehaviour
         GameObject honeyBall = Instantiate(honeyBallPrefab, shootPoint.position, shootPoint.rotation);
         Rigidbody rb = honeyBall.GetComponent<Rigidbody>();
         rb.AddForce(shootPoint.forward * shootForce);
+    }
+
+    private IEnumerator AbilitySequence()
+    {
+        isReady = false;
+        if (!hasFired)
+        {
+            hasFired = true;
+
+            ShootHoneyBall();
+        }
+        hasFired = false;
+        yield return new WaitForSeconds(cooldownTime);
+        isReady = true;
     }
 }
