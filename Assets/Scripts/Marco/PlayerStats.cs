@@ -10,6 +10,10 @@ public class PlayerStats : MonoBehaviour
     public Renderer rend;
 
     private float currentHealth;
+
+    public delegate void DamageTaken(ref float amount);
+    public event DamageTaken OnDamageTaken;
+
     private void Start()
     {
         healthBar = GameObject.FindGameObjectWithTag("HealthBar").GetComponent<HealthBar>();
@@ -17,6 +21,7 @@ public class PlayerStats : MonoBehaviour
 
         healthBar.SetSliderMax(maxHealth);
     }
+
     private void Update()
     {
         if (currentHealth > maxHealth)
@@ -28,19 +33,21 @@ public class PlayerStats : MonoBehaviour
             StartCoroutine(Dead());
         }
     }
+
     public void TakeDamage(float amount)
     {
+        OnDamageTaken?.Invoke(ref amount);
         currentHealth -= amount;
         healthBar.SetSlider(currentHealth);
+        Debug.Log(amount);
     }
+
     public void HealPlayer(float amount)
     {
         currentHealth += amount;
         healthBar.SetSlider(currentHealth);
     }
-    private void Die()
-    {   
-    }
+
     IEnumerator Dead()
     {
         Debug.Log("dead");

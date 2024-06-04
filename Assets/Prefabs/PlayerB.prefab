@@ -521,7 +521,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1249023833499995122}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.16675448, y: 0.20959918, z: -0.03630283, w: 0.9627789}
+  m_LocalRotation: {x: 0.16675447, y: 0.2095992, z: -0.036302835, w: 0.9627789}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1364,7 +1364,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6844585024246753493}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08698865, y: 0.21187514, z: -0.01893763, w: 0.9732334}
+  m_LocalRotation: {x: 0.08698865, y: 0.21187516, z: -0.01893763, w: 0.9732334}
   m_LocalPosition: {x: -2.8390656, y: 2.4389405, z: -6.211487}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1542,6 +1542,8 @@ GameObject:
   - component: {fileID: 5181693486179554795}
   - component: {fileID: 2284472729814615843}
   - component: {fileID: 1790884715463430548}
+  - component: {fileID: 2708192185069570752}
+  - component: {fileID: -8848463805626619392}
   m_Layer: 6
   m_Name: PlayerB
   m_TagString: Player
@@ -1696,3 +1698,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   particlePrefab: {fileID: 4881293977272286202, guid: 121dff3289e2ff240b86a0fde9ff277a, type: 3}
   fadeOutTime: 3
+--- !u!114 &2708192185069570752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609445733982567015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 467dc6b75067fbd4baf3cc2c747b8a2a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackRange: 5
+  damage: 20
+  isReady: 1
+  cooldownTime: 5
+--- !u!114 &-8848463805626619392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7609445733982567015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c39b9cdf7def0fe48a2172ec666f7f07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isHardened: 0
+  isReady: 1
+  cooldownTime: 12

@@ -15,7 +15,7 @@ public class ShootHoney : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) // Assuming left mouse button for shooting
+        if (Input.GetKeyDown(KeyCode.E))
         {
             if (isReady == false)
             {

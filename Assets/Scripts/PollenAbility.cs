@@ -12,11 +12,6 @@ public class PollenAbility : MonoBehaviour
 
     public float fadeOutTime = 4f;
 
-    void Start()
-    {
-
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
