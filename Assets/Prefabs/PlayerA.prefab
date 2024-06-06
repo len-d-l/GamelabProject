@@ -625,7 +625,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4692245415139038444}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 76bb6add5bf3cdf4ca076bbd99033057, type: 3}
   m_Name: 
@@ -664,6 +664,8 @@ MonoBehaviour:
   honeyBallPrefab: {fileID: 5023509867703446306, guid: 60a8b3dbdeb4e874588c44ee718c0768, type: 3}
   shootPoint: {fileID: 8797342532071590442}
   shootForce: 500
+  isReady: 1
+  cooldownTime: 4
 --- !u!1 &5195322276630948942
 GameObject:
   m_ObjectHideFlags: 0
