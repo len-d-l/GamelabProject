@@ -36,32 +36,42 @@ public class PlayerMovement : NetworkBehaviour
 
     private void Update()
     {
-        //if (HasInputAuthority)
-        //{
-            
-        //}
+        if (HasInputAuthority)
+        {
+            // Ground check
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-        // Ground check
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+            MyInputs();
+            SpeedControl();
 
-        MyInputs();
-        SpeedControl();
+            // Handle drag
+            if (grounded)
+                rb.drag = groundDrag;
+            else
+                rb.drag = 0;
+        }
 
-        // Handle drag
-        if (grounded)
-            rb.drag = groundDrag;
-        else
-            rb.drag = 0;
+        
     }
 
     public override void FixedUpdateNetwork()
     {
-        //if (HasInputAuthority)
-        //{
+        if (GetInput(out NetworkInputData networkInputData))
+        {
+            //Vector3 moveDirection = transform.forward * networkInputData.movementInput.y + transform.right * networkInputData.movementInput.x;
+            //moveDirection.Normalize();
             
-        //}
+            
+        }
 
-        MovePlayer();
+        
+
+        if (HasInputAuthority)
+        {
+            MovePlayer();
+        }
+
+
     }
 
     private void MyInputs()

@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
-//using Fusion;
+using Fusion;
 
-public class ThirdPersonCam : MonoBehaviour
+public class ThirdPersonCam : NetworkBehaviour
 {
     [Header("References")]
     public Transform orientation;
@@ -19,11 +19,11 @@ public class ThirdPersonCam : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        //if (HasInputAuthority)
-        //{
-        //    cam.Priority = 100;
-        //}
-        //else { cam.Priority = 10; }
+        if (HasInputAuthority)
+        {
+            cam.Priority = 100;
+        }
+        else { cam.Priority = 10; }
     }
 
     private void Update()
