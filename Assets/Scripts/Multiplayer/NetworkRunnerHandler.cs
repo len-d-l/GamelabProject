@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using System;
 using System.Linq;
-
+using Unity.VisualScripting;
 
 public class NetworkRunnerHandler : MonoBehaviour
 {
@@ -20,7 +20,8 @@ public class NetworkRunnerHandler : MonoBehaviour
         networkRunner = Instantiate(networkRunnerPrefab);
         networkRunner.name = "Network Runner";
 
-        var clientTask = InitializeNetworkRunner(networkRunner, GameMode.AutoHostOrClient, NetAddress.Any(), SceneManager.GetActiveScene().buildIndex, null);
+        var clientTask = InitializeNetworkRunner(networkRunner, GameMode.AutoHostOrClient, NetAddress.Any(), SceneRef.FromIndex(SceneManager.GetActiveScene().buildIndex), null);
+        Debug.Log("Server Network Started");
     }
 
     protected virtual Task InitializeNetworkRunner(NetworkRunner runner, GameMode gameMode, NetAddress address, SceneRef scene, Action<NetworkRunner> initialized)
