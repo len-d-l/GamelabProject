@@ -3,8 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Fusion;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : NetworkBehaviour
 {
+    PlayerMovement playerMovement;
+
     [Header("Movement")]
     public float moveSpeed;
 
@@ -52,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
             rb.drag = 0;
     }
 
-    public void FixedUpdate()
+    public override void FixedUpdateNetwork()
     {
         //if (HasInputAuthority)
         //{

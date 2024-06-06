@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 6162780427653916811}
   - component: {fileID: 2778269996475887624}
   - component: {fileID: 1998427509208662056}
+  - component: {fileID: 186274639408035493}
   m_Layer: 6
   m_Name: PlayerA
   m_TagString: Player
@@ -664,6 +665,26 @@ MonoBehaviour:
   honeyBallPrefab: {fileID: 5023509867703446306, guid: 60a8b3dbdeb4e874588c44ee718c0768, type: 3}
   shootPoint: {fileID: 8797342532071590442}
   shootForce: 500
+  isReady: 1
+  cooldownTime: 4
+--- !u!114 &186274639408035493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692245415139038444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SortKey: 1139431605
+  ObjectInterest: 1
+  Flags: 262145
+  NestedObjects: []
+  NetworkedBehaviours:
+  - {fileID: 2216749329739302952}
 --- !u!1 &5195322276630948942
 GameObject:
   m_ObjectHideFlags: 0
