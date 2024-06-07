@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6178960413295377009}
   - component: {fileID: -1296437830669404250}
   - component: {fileID: 5634027122435926621}
+  - component: {fileID: -8766415953221197311}
   m_Layer: 0
   m_Name: NetworkRunner
   m_TagString: Untagged
@@ -59,3 +60,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _playerPrefab:
     RawGuidValue: e3adf0afd46468b4d92ba0aad25bcbc1
+--- !u!114 &-8766415953221197311
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4970807414705438108}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b5a1ff9dee264bfd829a39e6542dcbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _physicsAuthority: 2
+  _physicsTiming: 3
+  ClientPhysicsSimulation: 0
+  DeltaTimeMultiplier: 1
+  SetUnityFixedTimestep: 0

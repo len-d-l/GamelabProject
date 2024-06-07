@@ -5,8 +5,6 @@ using Fusion;
 
 public class PlayerMovement : NetworkBehaviour
 {
-    PlayerMovement playerMovement;
-
     [Header("Movement")]
     public float moveSpeed;
 
@@ -26,16 +24,49 @@ public class PlayerMovement : NetworkBehaviour
 
     Vector3 moveDirection;
 
-    Rigidbody rb;
+    public Rigidbody rb;
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
         rb.freezeRotation = true;
     }
 
     private void Update()
     {
+        //if (HasInputAuthority)
+        //{
+        //    // Ground check
+        //    grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+
+        //    MyInputs();
+        //    SpeedControl();
+
+        //    // Handle drag
+        //    if (grounded)
+        //        rb.drag = groundDrag;
+        //    else
+        //        rb.drag = 0;
+        //}
+
+        
+    }
+
+    public override void FixedUpdateNetwork()
+    {
+        if (GetInput(out NetworkInputData networkInputData))
+        {
+            networkInputData.direction.Normalize();
+        }
+
+        
+
+        if (HasInputAuthority)
+        {
+            MovePlayer();
+        }
+
+
         if (HasInputAuthority)
         {
             // Ground check
@@ -50,27 +81,6 @@ public class PlayerMovement : NetworkBehaviour
             else
                 rb.drag = 0;
         }
-
-        
-    }
-
-    public override void FixedUpdateNetwork()
-    {
-        if (GetInput(out NetworkInputData networkInputData))
-        {
-            //Vector3 moveDirection = transform.forward * networkInputData.movementInput.y + transform.right * networkInputData.movementInput.x;
-            //moveDirection.Normalize();
-            
-            
-        }
-
-        
-
-        if (HasInputAuthority)
-        {
-            MovePlayer();
-        }
-
 
     }
 
