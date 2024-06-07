@@ -59,7 +59,7 @@ public class PlayerMovement : NetworkBehaviour
             networkInputData.direction.Normalize();
         }
 
-        
+
 
         if (HasInputAuthority)
         {

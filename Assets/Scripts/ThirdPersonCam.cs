@@ -26,7 +26,7 @@ public class ThirdPersonCam : NetworkBehaviour
         else { cam.Priority = 10; }
     }
 
-    private void Update()
+    public override void FixedUpdateNetwork()
     {
         // Rotate orientation
         Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
@@ -37,7 +37,7 @@ public class ThirdPersonCam : NetworkBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        if (inputDir != Vector3.zero /*&& HasInputAuthority*/)
+        if (inputDir != Vector3.zero && HasInputAuthority)
             playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
     }
 }
