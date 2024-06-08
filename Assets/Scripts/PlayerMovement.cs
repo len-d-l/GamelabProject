@@ -59,16 +59,10 @@ public class PlayerMovement : NetworkBehaviour
             networkInputData.direction.Normalize();
         }
 
-
-
         if (HasInputAuthority)
         {
             MovePlayer();
-        }
 
-
-        if (HasInputAuthority)
-        {
             // Ground check
             grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
