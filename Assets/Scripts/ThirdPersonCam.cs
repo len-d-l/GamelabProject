@@ -4,7 +4,7 @@ using UnityEngine;
 using Cinemachine;
 using Fusion;
 
-public class ThirdPersonCam : NetworkBehaviour
+public class ThirdPersonCam : MonoBehaviour /*NetworkBehaviour*/
 {
     [Header("References")]
     public Transform orientation;
@@ -19,14 +19,14 @@ public class ThirdPersonCam : NetworkBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-        if (HasInputAuthority)
-        {
-            cam.Priority = 100;
-        }
-        else { cam.Priority = 10; }
+        //if (HasInputAuthority)
+        //{
+        //    cam.Priority = 100;
+        //}
+        //else { cam.Priority = 10; }
     }
 
-    public override void FixedUpdateNetwork()
+    private void Update() /*FixedUpdateNetwork*/
     {
         // Rotate orientation
         Vector3 viewDir = player.position - new Vector3(transform.position.x, player.position.y, transform.position.z);
@@ -37,7 +37,7 @@ public class ThirdPersonCam : NetworkBehaviour
         float verticalInput = Input.GetAxis("Vertical");
         Vector3 inputDir = orientation.forward * verticalInput + orientation.right * horizontalInput;
 
-        if (inputDir != Vector3.zero && HasInputAuthority)
+        if (inputDir != Vector3.zero /*&& HasInputAuthority*/)
             playerObj.forward = Vector3.Slerp(playerObj.forward, inputDir.normalized, Time.deltaTime * rotationSpeed);
     }
 }

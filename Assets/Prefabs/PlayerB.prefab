@@ -1727,5 +1727,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHardened: 0
+  isSlowed: 0
   isReady: 1
   cooldownTime: 12

@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Fusion;
+using UnityEngine.Networking;
+//using Fusion;
+//using Fusion.Addons.Physics;
 
-public class PlayerMovement : NetworkBehaviour
+public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
 {
     [Header("Movement")]
     public float moveSpeed;
@@ -24,59 +26,67 @@ public class PlayerMovement : NetworkBehaviour
 
     Vector3 moveDirection;
 
-    public Rigidbody rb;
+    private Rigidbody rb;
 
-    private void Start()
+    private bool isAudioPlaying;
+
+    //private NetworkRigidbody3D nrb;
+
+    private void Awake()
     {
-        //rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
+        //nrb = GetComponent<NetworkRigidbody3D>();
         rb.freezeRotation = true;
     }
 
     private void Update()
     {
-        //if (HasInputAuthority)
-        //{
-        //    // Ground check
-        //    grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        // Ground check
+        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-        //    MyInputs();
-        //    SpeedControl();
+        MyInputs();
+        SpeedControl();
 
-        //    // Handle drag
-        //    if (grounded)
-        //        rb.drag = groundDrag;
-        //    else
-        //        rb.drag = 0;
-        //}
+        // Handle drag
+        if (grounded)
+            rb.drag = groundDrag;
+        else
+            rb.drag = 0;
 
-        
+        HandleAudio();
     }
 
-    public override void FixedUpdateNetwork()
+    private void FixedUpdate()
     {
-        if (GetInput(out NetworkInputData networkInputData))
-        {
-            networkInputData.direction.Normalize();
-        }
-
-        if (HasInputAuthority)
-        {
-            MovePlayer();
-
-            // Ground check
-            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
-
-            MyInputs();
-            SpeedControl();
-
-            // Handle drag
-            if (grounded)
-                rb.drag = groundDrag;
-            else
-                rb.drag = 0;
-        }
-
+        MovePlayer();
     }
+
+    //public override void FixedUpdateNetwork()
+    //{
+    //    if (GetInput(out NetworkInputData data))
+    //    {
+    //        data.direction.Normalize();
+    //        nrb.ResetRigidbody();
+    //    }
+
+    //    if (HasInputAuthority)
+    //    {
+    //        MovePlayer();
+
+    //        // Ground check
+    //        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+
+    //        MyInputs();
+    //        SpeedControl();
+
+    //        // Handle drag
+    //        if (grounded)
+    //            rb.drag = groundDrag;
+    //        else
+    //            rb.drag = 0;
+    //    }
+
+    //}
 
     private void MyInputs()
     {
@@ -101,6 +111,32 @@ public class PlayerMovement : NetworkBehaviour
         {
             Vector3 limitedVel = flatVel.normalized * moveSpeed;
             rb.velocity = new Vector3(limitedVel.x, rb.velocity.y, limitedVel.z);
+        }
+    }
+
+    private void HandleAudio()
+    {
+        bool isMoving = moveDirection.magnitude > 0.1f;
+        string soundToPlay = "";
+
+        if (gameObject.name == "PlayerA(Clone)")
+        {
+            soundToPlay = "BeeWalk";
+        }
+        else if (gameObject.name == "PlayerB(Clone)")
+        {
+            soundToPlay = "Walk";
+        }
+
+        if (isMoving && !isAudioPlaying && !string.IsNullOrEmpty(soundToPlay))
+        {
+            FindObjectOfType<AudioManager>().PlayAudio(soundToPlay);
+            isAudioPlaying = true;
+        }
+        else if (!isMoving && isAudioPlaying)
+        {
+            FindObjectOfType<AudioManager>().StopAudio(soundToPlay);
+            isAudioPlaying = false;
         }
     }
 }

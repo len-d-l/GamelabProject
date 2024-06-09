@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &9058476060505969575
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1225551316124436875}
+  - component: {fileID: 1132949906881178123}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1225551316124436875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058476060505969575}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1132949906881178123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9058476060505969575}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d15026bef13504b418d7da22e15258c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sounds:
+  - name: BeeWalk
+    clip: {fileID: 8300000, guid: 35b1ba05bd6817542b11ff51d8220f35, type: 3}
+    volume: 0.381
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: MainMenuTheme
+    clip: {fileID: 8300000, guid: e718454da259637449615df4df27ed8f, type: 3}
+    volume: 0.762
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: BGM1
+    clip: {fileID: 8300000, guid: 52e3cf09df2e9ce48971d5628489d9ec, type: 3}
+    volume: 0.155
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: BGM2
+    clip: {fileID: 8300000, guid: 8a40c6e7c2bf0a248aa1c19cc17fe439, type: 3}
+    volume: 0.155
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: BGM3
+    clip: {fileID: 8300000, guid: 70485dfb743c69b45ae05ef7319f1d27, type: 3}
+    volume: 0.155
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Walk
+    clip: {fileID: 8300000, guid: 961a5c687fe532940b06da5abc14675a, type: 3}
+    volume: 0.378
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}

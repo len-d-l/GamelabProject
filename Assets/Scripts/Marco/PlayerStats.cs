@@ -3,13 +3,13 @@ using System.Collections;
 
 public class PlayerStats : MonoBehaviour
 {
-    [SerializeField] private float maxHealth;
+    [SerializeField] public float maxHealth;
 
     public HealthBar healthBar;
     public GameObject player;
     public Renderer rend;
 
-    private float currentHealth;
+    public float currentHealth;
 
     public delegate void DamageTaken(ref float amount);
     public event DamageTaken OnDamageTaken;
