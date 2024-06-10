@@ -1609,6 +1609,7 @@ GameObject:
   - component: {fileID: 819385147}
   - component: {fileID: 819385146}
   - component: {fileID: 819385145}
+  - component: {fileID: 819385149}
   m_Layer: 5
   m_Name: Radial segment (1)
   m_TagString: Untagged
@@ -1691,7 +1692,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 819385147}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 819385149}
+        m_TargetAssemblyTypeName: EmoteOption, Assembly-CSharp
+        m_MethodName: OnOptionSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &819385147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1730,6 +1743,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 819385143}
   m_CullTransparentMesh: 1
+--- !u!114 &819385149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 819385143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e276f384eedc144a4fc0fa0add0770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 0}
 --- !u!1 &836254097
 GameObject:
   m_ObjectHideFlags: 0
@@ -1743,6 +1769,7 @@ GameObject:
   - component: {fileID: 836254101}
   - component: {fileID: 836254100}
   - component: {fileID: 836254099}
+  - component: {fileID: 836254103}
   m_Layer: 5
   m_Name: Radial segment (2)
   m_TagString: Untagged
@@ -1825,7 +1852,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 836254101}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 836254103}
+        m_TargetAssemblyTypeName: EmoteOption, Assembly-CSharp
+        m_MethodName: OnOptionSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &836254101
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1864,6 +1903,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 836254097}
   m_CullTransparentMesh: 1
+--- !u!114 &836254103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 836254097}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e276f384eedc144a4fc0fa0add0770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 4881293977272286202, guid: 727675d1fd3b444478c463eea1baaa7d, type: 3}
 --- !u!1 &979068335
 GameObject:
   m_ObjectHideFlags: 0
@@ -2511,6 +2563,7 @@ GameObject:
   - component: {fileID: 1413938336}
   - component: {fileID: 1413938335}
   - component: {fileID: 1413938334}
+  - component: {fileID: 1413938338}
   m_Layer: 5
   m_Name: Radial segment (3)
   m_TagString: Untagged
@@ -2593,7 +2646,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1413938336}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1413938338}
+        m_TargetAssemblyTypeName: EmoteOption, Assembly-CSharp
+        m_MethodName: OnOptionSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1413938336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2632,6 +2697,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1413938332}
   m_CullTransparentMesh: 1
+--- !u!114 &1413938338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413938332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e276f384eedc144a4fc0fa0add0770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 4881293977272286202, guid: 79086c09264cec54eb831c50463f710f, type: 3}
 --- !u!1001 &1515620951
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3070,6 +3148,7 @@ GameObject:
   - component: {fileID: 1840961762}
   - component: {fileID: 1840961761}
   - component: {fileID: 1840961760}
+  - component: {fileID: 1840961764}
   m_Layer: 5
   m_Name: Radial segment (5)
   m_TagString: Untagged
@@ -3152,7 +3231,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1840961762}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1840961764}
+        m_TargetAssemblyTypeName: EmoteOption, Assembly-CSharp
+        m_MethodName: OnOptionSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1840961762
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3191,6 +3282,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1840961758}
   m_CullTransparentMesh: 1
+--- !u!114 &1840961764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840961758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e276f384eedc144a4fc0fa0add0770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 4881293977272286202, guid: 77b28fcb32999ce48a98c95399f3ae66, type: 3}
 --- !u!1 &1854188554
 GameObject:
   m_ObjectHideFlags: 0
@@ -3325,6 +3429,7 @@ GameObject:
   - component: {fileID: 1905496615}
   - component: {fileID: 1905496614}
   - component: {fileID: 1905496613}
+  - component: {fileID: 1905496617}
   m_Layer: 5
   m_Name: Radial segment (4)
   m_TagString: Untagged
@@ -3407,7 +3512,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1905496615}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1905496617}
+        m_TargetAssemblyTypeName: EmoteOption, Assembly-CSharp
+        m_MethodName: OnOptionSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1905496615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3446,6 +3563,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905496611}
   m_CullTransparentMesh: 1
+--- !u!114 &1905496617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905496611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e276f384eedc144a4fc0fa0add0770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 4881293977272286202, guid: 20441aab55ac0cc4ea7f622e703b14a4, type: 3}
 --- !u!1001 &1957333168
 PrefabInstance:
   m_ObjectHideFlags: 0
