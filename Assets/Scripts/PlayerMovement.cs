@@ -30,6 +30,8 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
 
     private bool isAudioPlaying;
 
+    public bool dashing;
+
     //private NetworkRigidbody3D nrb;
 
     private void Awake()
@@ -58,7 +60,10 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (!dashing)
+        {
+            MovePlayer();
+        }
     }
 
     //public override void FixedUpdateNetwork()
@@ -125,7 +130,11 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
         }
         else if (gameObject.name == "PlayerB(Clone)")
         {
-            soundToPlay = "Walk";
+            soundToPlay = "BeetleWalk";
+        }
+        else if (gameObject.name == "PlayerC(Clone)")
+        {
+            soundToPlay = "AntWalk";
         }
 
         if (isMoving && !isAudioPlaying && !string.IsNullOrEmpty(soundToPlay))

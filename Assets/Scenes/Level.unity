@@ -618,6 +618,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerAPrefab: {fileID: 4692245415139038444, guid: e3adf0afd46468b4d92ba0aad25bcbc1, type: 3}
   playerBPrefab: {fileID: 7609445733982567015, guid: bd187ffac1850164b9da7f667d7f89a3, type: 3}
+  playerCPrefab: {fileID: 7609445733982567015, guid: 51127110872b44743bc9a916d1f8b5d4, type: 3}
 --- !u!4 &349937919
 Transform:
   m_ObjectHideFlags: 0
@@ -627,7 +628,7 @@ Transform:
   m_GameObject: {fileID: 349937917}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 126.40197, y: 4.4097652, z: 79.66768}
+  m_LocalPosition: {x: 126.40197, y: 4.7, z: 63.91}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

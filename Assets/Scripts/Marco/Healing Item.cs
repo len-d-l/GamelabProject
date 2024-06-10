@@ -25,6 +25,7 @@ public class HealingItem : MonoBehaviour
 
     private IEnumerator RespawnMedkit()
     {
+        FindObjectOfType<AudioManager>().PlayAudio("Medkit");
         medkitObjMesh.enabled = false;
         medkitObjColl.enabled = false;
         yield return new WaitForSeconds(respawnTime);

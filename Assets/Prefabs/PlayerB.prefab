@@ -1616,6 +1616,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   orientation: {fileID: 2482248930568066129}
+  dashing: 0
 --- !u!114 &734097163950115672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1632,6 +1633,7 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   player: {fileID: 7609445733982567015}
   rend: {fileID: 0}
+  currentHealth: 0
 --- !u!114 &3847794756488307148
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1663,6 +1665,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   damage: 20
+  isReady: 1
+  isAttacking: 0
+  cooldownTime: 1
 --- !u!65 &2284472729814615843
 BoxCollider:
   m_ObjectHideFlags: 0

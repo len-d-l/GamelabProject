@@ -55,6 +55,10 @@ public class MeleeAttack : MonoBehaviour
         {
             soundToPlay = "BeetleAttack";
         }
+        else if (gameObject.name == "PlayerC(Clone)")
+        {
+            soundToPlay = "AntAttack";
+        }
 
         if (!string.IsNullOrEmpty(soundToPlay))
         {

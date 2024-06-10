@@ -33,6 +33,7 @@ public class GroundSlam : MonoBehaviour
     {
         isReady = false;
         PerformGroundSlam();
+        FindObjectOfType<AudioManager>().PlayAudio("GroundPound");
         yield return new WaitForSeconds(cooldownTime);
         isReady = true;
     }

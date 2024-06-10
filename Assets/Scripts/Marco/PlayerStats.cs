@@ -74,6 +74,10 @@ public class PlayerStats : MonoBehaviour
         {
             soundToPlay = "BeetleDeath";
         }
+        else if (gameObject.name == "PlayerC(Clone)")
+        {
+            soundToPlay = "AntDeath";
+        }
 
         if (!string.IsNullOrEmpty(soundToPlay))
         {

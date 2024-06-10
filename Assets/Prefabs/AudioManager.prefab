@@ -75,8 +75,8 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
-  - name: Walk
-    clip: {fileID: 8300000, guid: 961a5c687fe532940b06da5abc14675a, type: 3}
+  - name: BeetleWalk
+    clip: {fileID: 8300000, guid: 2390db0084482534ea0fffbaaccfa672, type: 3}
     volume: 0.378
     pitch: 1
     loop: 1
@@ -127,5 +127,65 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: f5a8f361dfe93304d914d97560ad1d46, type: 3}
     volume: 0.387
     pitch: 1.058
+    loop: 0
+    source: {fileID: 0}
+  - name: BeetleDeath
+    clip: {fileID: 8300000, guid: 64ff434ea6f5c8f46bf73e2d16755a12, type: 3}
+    volume: 0.363
+    pitch: 0.166
+    loop: 0
+    source: {fileID: 0}
+  - name: AntDeath
+    clip: {fileID: 8300000, guid: 64ff434ea6f5c8f46bf73e2d16755a12, type: 3}
+    volume: 0.363
+    pitch: 0.728
+    loop: 0
+    source: {fileID: 0}
+  - name: AntWalk
+    clip: {fileID: 8300000, guid: 8ab9082f0ab20a648bac6e8af6b8b607, type: 3}
+    volume: 0.248
+    pitch: 0.364
+    loop: 1
+    source: {fileID: 0}
+  - name: GroundPound
+    clip: {fileID: 8300000, guid: 6520d62849c4f7c4b99b85286d270a65, type: 3}
+    volume: 0.305
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BeetleAttack
+    clip: {fileID: 8300000, guid: c8a34e6e0a9bdd54d8f1d77d68aeecf6, type: 3}
+    volume: 0.33
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: AntAttack
+    clip: {fileID: 8300000, guid: c8a34e6e0a9bdd54d8f1d77d68aeecf6, type: 3}
+    volume: 0.33
+    pitch: 1.463
+    loop: 0
+    source: {fileID: 0}
+  - name: ShootAcid
+    clip: {fileID: 8300000, guid: 66d8b328e1a123143aa6a57adca26573, type: 3}
+    volume: 0.436
+    pitch: 0.728
+    loop: 0
+    source: {fileID: 0}
+  - name: AntJump
+    clip: {fileID: 8300000, guid: 6ea9a90fcdea0944bafbb13738a2b96f, type: 3}
+    volume: 0.524
+    pitch: 1.496
+    loop: 0
+    source: {fileID: 0}
+  - name: TermiteWalk
+    clip: {fileID: 8300000, guid: 8ab9082f0ab20a648bac6e8af6b8b607, type: 3}
+    volume: 0.379
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: Medkit
+    clip: {fileID: 8300000, guid: f00f1bc2ee99c8b41af06b85816c883a, type: 3}
+    volume: 0.399
+    pitch: 1.827
     loop: 0
     source: {fileID: 0}

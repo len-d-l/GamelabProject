@@ -4,6 +4,7 @@ public class PlayerSpawner : MonoBehaviour
 {
     public GameObject playerAPrefab;
     public GameObject playerBPrefab;
+    public GameObject playerCPrefab;
 
     void Start()
     {
@@ -21,6 +22,10 @@ public class PlayerSpawner : MonoBehaviour
         else if (CharacterSelectionManager.selectedCharacter == "PlayerB")
         {
             playerToSpawn = playerBPrefab;
+        }
+        else if (CharacterSelectionManager.selectedCharacter == "PlayerC")
+        {
+            playerToSpawn = playerCPrefab;
         }
 
         if (playerToSpawn != null)

@@ -20,6 +20,12 @@ public class CharacterSelectionManager : MonoBehaviour
         LoadLevelScene();
     }
 
+    public void SelectPlayerC()
+    {
+        selectedCharacter = "PlayerC";
+        LoadLevelScene();
+    }
+
     // Function to load the Level scene
     private void LoadLevelScene()
     {
