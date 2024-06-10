@@ -52,11 +52,32 @@ public class PlayerStats : MonoBehaviour
     {
         Debug.Log("dead");
         //player.SetActive(false);
+        PlayDeathSound();
         yield return new WaitForSeconds(1);
         Debug.Log("respawn");
         player.transform.position = new Vector3(129.08f, 6.31f, 59.2f);
         currentHealth = maxHealth;
         healthBar.SetSlider(maxHealth);
         //player.SetActive(true);
+    }
+
+    //Len
+    void PlayDeathSound()
+    {
+        string soundToPlay = "";
+
+        if (gameObject.name == "PlayerA(Clone)")
+        {
+            soundToPlay = "BeeDeath";
+        }
+        else if (gameObject.name == "PlayerB(Clone)")
+        {
+            soundToPlay = "BeetleDeath";
+        }
+
+        if (!string.IsNullOrEmpty(soundToPlay))
+        {
+            FindObjectOfType<AudioManager>().PlayAudio(soundToPlay);
+        }
     }
 }

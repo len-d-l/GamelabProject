@@ -81,3 +81,51 @@ MonoBehaviour:
     pitch: 1
     loop: 1
     source: {fileID: 0}
+  - name: BeeAttack
+    clip: {fileID: 8300000, guid: 66d8b328e1a123143aa6a57adca26573, type: 3}
+    volume: 0.405
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: BeeDeath
+    clip: {fileID: 8300000, guid: 64ff434ea6f5c8f46bf73e2d16755a12, type: 3}
+    volume: 0.363
+    pitch: 0.488
+    loop: 0
+    source: {fileID: 0}
+  - name: BeetleDeath
+    clip: {fileID: 8300000, guid: f040d2dab60fcbe4cb0c93e6714b31cb, type: 3}
+    volume: 0.363
+    pitch: 0.773
+    loop: 0
+    source: {fileID: 0}
+  - name: BeetleHarden
+    clip: {fileID: 8300000, guid: b644db11971141740a32cd63e9dd3832, type: 3}
+    volume: 0.387
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: TermiteDeath
+    clip: {fileID: 8300000, guid: 7e74ae140d086124eb8cc9d5dbf61d96, type: 3}
+    volume: 0.387
+    pitch: 1.507
+    loop: 0
+    source: {fileID: 0}
+  - name: TermiteAttack1
+    clip: {fileID: 8300000, guid: 2a8b29eb01210054696e021566fdb322, type: 3}
+    volume: 0.387
+    pitch: 1.067
+    loop: 0
+    source: {fileID: 0}
+  - name: TermiteAttack2
+    clip: {fileID: 8300000, guid: 65e620d47b34d6341a38aca8a6de64d4, type: 3}
+    volume: 0.387
+    pitch: 1.067
+    loop: 0
+    source: {fileID: 0}
+  - name: TermiteAttack3
+    clip: {fileID: 8300000, guid: f5a8f361dfe93304d914d97560ad1d46, type: 3}
+    volume: 0.387
+    pitch: 1.058
+    loop: 0
+    source: {fileID: 0}

@@ -92,6 +92,10 @@ public class EnemyAI : MonoBehaviour
             rb.AddForce(transform.up * 8f, ForceMode.Impulse);
             ///End of attack code
 
+            string[] levelSounds = { "TermiteAttack1", "TermiteAttack2", "TermiteAttack3" };
+            int randomIndex = UnityEngine.Random.Range(0, levelSounds.Length);
+            FindObjectOfType<AudioManager>().PlayAudio(levelSounds[randomIndex]);
+
             alreadyAttacked = true;
             Invoke(nameof(ResetAttack), timeBetweenAttacks);
         }
@@ -110,6 +114,7 @@ public class EnemyAI : MonoBehaviour
     private void DestroyEnemy()
     {
         Destroy(gameObject);
+        FindObjectOfType<AudioManager>().PlayAudio("TermiteDeath");
     }
 
     private void OnDrawGizmosSelected()

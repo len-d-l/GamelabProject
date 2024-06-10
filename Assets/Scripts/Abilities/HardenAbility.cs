@@ -42,6 +42,7 @@ public class HardenAbility : MonoBehaviour
         isHardened = true;
         isSlowed = true;
         Slowed();
+        FindObjectOfType<AudioManager>().PlayAudio("BeetleHarden");
         yield return new WaitForSeconds(cooldownTime / 2);
         isHardened = false;
         isSlowed = false;
