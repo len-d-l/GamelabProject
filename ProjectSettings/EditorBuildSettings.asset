@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu Scenes/BeetleInfo.unity
     guid: fe3a6b7570d6df948b0e02cf3a404461
   - enabled: 1
+    path: Assets/Scenes/Main Menu Scenes/AntInfo.unity
+    guid: 281e2e253cf5fcc41ae8e86437b5e83b
+  - enabled: 1
     path: Assets/Scenes/Main Menu Scenes/Settings.unity
     guid: ab7472fd6af250342a35e65f87ba63d5
   - enabled: 1

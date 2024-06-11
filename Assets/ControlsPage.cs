@@ -15,6 +15,11 @@ public class ControlsPage : MonoBehaviour
         SceneManager.LoadSceneAsync("BeetleInfo");
     }
 
+    public void OpenAnt()
+    {
+        SceneManager.LoadSceneAsync("AntInfo");
+    }
+
     public void GoBack()
     {
         SceneManager.LoadSceneAsync("MainMenu");
