@@ -1,10 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class EnemyAI : MonoBehaviour
 {
-    public UnityEngine.AI.NavMeshAgent agent;
+    public NavMeshAgent agent;
 
     private GameObject player;
 
@@ -29,11 +30,13 @@ public class EnemyAI : MonoBehaviour
     // Audio
     private bool isWalkingSoundPlaying = false;
 
+    // Animation
+    public Animator animator;
+
     private void Awake()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
-        agent = GetComponent<UnityEngine.AI.NavMeshAgent>();
+        agent = GetComponent<NavMeshAgent>();
     }
 
     private void Update()
@@ -88,6 +91,8 @@ public class EnemyAI : MonoBehaviour
         }
 
         PlayWalkingSound();
+        HandleAnimation();
+
     }
 
     private void AttackPlayer()
@@ -157,6 +162,16 @@ public class EnemyAI : MonoBehaviour
         {
             FindObjectOfType<AudioManager>().StopAudio("TermiteWalk");
             isWalkingSoundPlaying = false;
+        }
+    }
+
+    private void HandleAnimation()
+    {
+        bool isMoving = agent.velocity.magnitude > 0.1f;
+
+        if (animator != null)
+        {
+            animator.SetBool("isWalking", isMoving);
         }
     }
 }

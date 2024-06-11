@@ -1004,6 +1004,7 @@ MonoBehaviour:
   attackRange: 3
   playerInSightRange: 0
   playerInAttackRange: 0
+  animator: {fileID: 7701763323026815520}
 --- !u!65 &215942639139501258
 BoxCollider:
   m_ObjectHideFlags: 0
