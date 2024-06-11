@@ -915,6 +915,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793798613}
   m_CullTransparentMesh: 1
+--- !u!1 &947889843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 947889844}
+  - component: {fileID: 947889845}
+  m_Layer: 0
+  m_Name: EmoteWheelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &947889844
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947889843}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 653, y: 235, z: 344}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &947889845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947889843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69a90e28ba11704ba38c03b5476b9c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emoteWheel: {fileID: 1595015502}
 --- !u!1 &1161159865
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,12 +1539,12 @@ GameObject:
   - component: {fileID: 1595015504}
   - component: {fileID: 1595015503}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: emoteWheel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1595015503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1827,6 +1872,7 @@ GameObject:
   - component: {fileID: 1721656315}
   - component: {fileID: 1721656314}
   - component: {fileID: 1721656317}
+  - component: {fileID: 1721656318}
   m_Layer: 5
   m_Name: Radial segment
   m_TagString: Untagged
@@ -1897,7 +1943,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1721656315}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1721656318}
+        m_TargetAssemblyTypeName: EmoteOption, Assembly-CSharp
+        m_MethodName: OnOptionSelected
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1721656315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1948,6 +2006,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b23263c4cc8674949b98cd11c45e6dc3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1721656318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1721656312}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50e276f384eedc144a4fc0fa0add0770, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  particleEffect: {fileID: 4881293977272286202, guid: 121dff3289e2ff240b86a0fde9ff277a, type: 3}
 --- !u!1 &1879739852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2234,3 +2305,4 @@ SceneRoots:
   - {fileID: 1531465594}
   - {fileID: 1595015506}
   - {fileID: 2098169765}
+  - {fileID: 947889844}
