@@ -61,7 +61,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1229646022542745898}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.18112494, y: -0.7173725, z: 0.20254095, w: 0.64151984}
+  m_LocalRotation: {x: 0.18112494, y: -0.7173725, z: 0.20254093, w: 0.6415199}
   m_LocalPosition: {x: 5.4984283, y: 4.1524158, z: 0.615757}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -736,7 +736,7 @@ MonoBehaviour:
     m_Bits: 128
   orientation: {fileID: 7599111695008626907}
   dashing: 0
-  animBee: {fileID: 0}
+  animBee: {fileID: 5685308337933325114}
   animBeetle: {fileID: 0}
   animAnt: {fileID: 0}
 --- !u!114 &5533668328198354539
@@ -1547,7 +1547,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7532176704744185130}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.21090001, y: -0.707126, z: 0.23583661, w: 0.63235676}
+  m_LocalRotation: {x: 0.21090002, y: -0.70712596, z: 0.2358366, w: 0.6323568}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
