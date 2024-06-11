@@ -123,6 +123,52 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &88955410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 88955412}
+  - component: {fileID: 88955411}
+  m_Layer: 0
+  m_Name: EmoteWheelManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &88955411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88955410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c69a90e28ba11704ba38c03b5476b9c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  emoteWheel: {fileID: 270782179}
+  fadeOutTime: 3
+--- !u!4 &88955412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88955410}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 128.55511, y: 7.208782, z: 79.66768}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &134464922
 GameObject:
   m_ObjectHideFlags: 0
@@ -523,6 +569,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260211828}
   m_CullTransparentMesh: 1
+--- !u!1001 &270782178
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3388702844879109289, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4234452636691812418, guid: fc5a304afe15a184faef09805167852e, type: 3}
+      propertyPath: m_Name
+      value: EmoteWheel
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fc5a304afe15a184faef09805167852e, type: 3}
+--- !u!1 &270782179 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4234452636691812418, guid: fc5a304afe15a184faef09805167852e, type: 3}
+  m_PrefabInstance: {fileID: 270782178}
+  m_PrefabAsset: {fileID: 0}
 --- !u!850595691 &318290497
 LightingSettings:
   m_ObjectHideFlags: 0
@@ -2902,6 +3050,8 @@ SceneRoots:
   - {fileID: 833218502}
   - {fileID: 1836310994}
   - {fileID: 979068339}
+  - {fileID: 270782178}
+  - {fileID: 88955412}
   - {fileID: 8712611156508221987}
   - {fileID: 201779320}
   - {fileID: 662269260}
