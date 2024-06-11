@@ -32,6 +32,12 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
 
     public bool dashing;
 
+    public Animator animBee;
+    public Animator animBeetle;
+    public Animator animAnt;
+
+    private Animator currentAnimator;
+
     //private NetworkRigidbody3D nrb;
 
     private void Awake()
@@ -39,6 +45,20 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
         rb = GetComponent<Rigidbody>();
         //nrb = GetComponent<NetworkRigidbody3D>();
         rb.freezeRotation = true;
+
+        // Determine which animator to use based on the character
+        if (gameObject.name == "PlayerA(Clone)")
+        {
+            currentAnimator = animBee;
+        }
+        else if (gameObject.name == "PlayerB(Clone)")
+        {
+            currentAnimator = animBeetle;
+        }
+        else if (gameObject.name == "PlayerC(Clone)")
+        {
+            currentAnimator = animAnt;
+        }
     }
 
     private void Update()
@@ -56,6 +76,7 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
             rb.drag = 0;
 
         HandleAudio();
+        HandleAnimation();
     }
 
     private void FixedUpdate()
@@ -146,6 +167,23 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
         {
             FindObjectOfType<AudioManager>().StopAudio(soundToPlay);
             isAudioPlaying = false;
+        }
+    }
+
+    private void HandleAnimation()
+    {
+        bool isMoving = moveDirection.magnitude > 0.1f;
+
+        if (currentAnimator != null)
+        {
+            if (isMoving)
+            {
+                currentAnimator.SetBool("isWalking", true);
+            }
+            else
+            {
+                currentAnimator.SetBool("isWalking", false);
+            }
         }
     }
 }
