@@ -6,22 +6,21 @@ using UnityEngine;
 public class SpawnFog : MonoBehaviour
 {
     public ParticleSystem particlePrefab;
-    public float fadeOutTime; // Duration of fade-out effect
+    public float fadeOutTime;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.F)) // Change KeyCode.Space to the desired button
+        if (Input.GetKey(KeyCode.F)) 
         {
-            SpawnParticle(Color.green); // Change color as per your requirements
+            SpawnParticle(Color.green); 
         }
 
-        if (Input.GetKey(KeyCode.G)) // Change KeyCode.Space to the desired button
+        if (Input.GetKey(KeyCode.G)) 
         {
-            SpawnParticle(Color.blue); // Change color as per your requirements
+            SpawnParticle(Color.blue); 
         }
-    // Add more conditions for other buttons if needed
-}
+    }
 
     public void SpawnParticle(Color color)
     {
@@ -61,13 +60,4 @@ public class SpawnFog : MonoBehaviour
         // Destroy the particle system game object
         Destroy(particle.gameObject);
     }
-
-    //private void OnParticleCollision(GameObject other)
-    //{
-    //    if (ParticleSystem.startColor. = Color.yellow)
-    //    {
-    //        other.GetComponent<PlayerStats>().HealPlayer(healAmount);
-    //        Destroy(gameObject);
-    //    }
-    //}
 }
