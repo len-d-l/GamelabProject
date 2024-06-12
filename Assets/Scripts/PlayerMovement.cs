@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
+using UnityEngine.SceneManagement;
 //using Fusion;
 //using Fusion.Addons.Physics;
 
@@ -77,6 +78,11 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
 
         HandleAudio();
         HandleAnimation();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            ExitToMainMenu();
+        }
     }
 
     private void FixedUpdate()
@@ -185,5 +191,12 @@ public class PlayerMovement : MonoBehaviour /*NetworkBehaviour*/
                 currentAnimator.SetBool("isWalking", false);
             }
         }
+    }
+
+    private void ExitToMainMenu()
+    {
+        SceneManager.LoadScene("StartMenu");
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 }

@@ -22,8 +22,8 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
         if (runner.IsServer)
         {
             // Create a unique position for the player
-            //Vector3 spawnPosition = new Vector3((player.RawEncoded % runner.Config.Simulation.PlayerCount) * 3, 1, 0);
-            Vector3 spawnPosition = new Vector3(112, 3, 52);
+            Vector3 spawnPosition = new Vector3((player.RawEncoded % runner.Config.Simulation.PlayerCount) * 3, 1, 0);
+            //Vector3 spawnPosition = new Vector3(112, 3, 52);
             NetworkObject networkPlayerObject = runner.Spawn(_playerPrefab, spawnPosition, Quaternion.identity, player);
             // Keep track of the player avatars for easy access
             _spawnedCharacters.Add(player, networkPlayerObject);
@@ -107,18 +107,18 @@ public class BasicSpawner : MonoBehaviour, INetworkRunnerCallbacks
         });
     }
 
-    //private void OnGUI()
-    //{
-    //    if (_runner == null)
-    //    {
-    //        if (GUI.Button(new Rect(0, 0, 200, 40), "Host"))
-    //        {
-    //            StartGame(GameMode.Host);
-    //        }
-    //        if (GUI.Button(new Rect(0, 40, 200, 40), "Join"))
-    //        {
-    //            StartGame(GameMode.Client);
-    //        }
-    //    }
-    //}
+    private void OnGUI()
+    {
+        if (_runner == null)
+        {
+            if (GUI.Button(new Rect(0, 0, 200, 40), "Host"))
+            {
+                StartGame(GameMode.Host);
+            }
+            if (GUI.Button(new Rect(0, 40, 200, 40), "Join"))
+            {
+                StartGame(GameMode.Client);
+            }
+        }
+    }
 }

@@ -517,14 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4468337160929093222}
   - component: {fileID: 3742517259072445216}
-  - component: {fileID: 8873961194271692196}
-  - component: {fileID: 6530282871015687447}
-  - component: {fileID: 3256759586476805460}
-  - component: {fileID: 7312278410260382269}
   - component: {fileID: 7599089367882081555}
-  - component: {fileID: 265875537204034501}
-  - component: {fileID: 8959695205177911821}
-  - component: {fileID: 3814014782657439282}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -579,72 +572,6 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 1
---- !u!114 &8873961194271692196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213581897068693761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 294113fc2d905e349a8ad5c7d9cb1668, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 7
-  groundDrag: 5
-  playerHeight: 2
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  orientation: {fileID: 5855942823345972981}
---- !u!114 &6530282871015687447
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213581897068693761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14ae21af7d68df244ba841867518e50c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  healthBar: {fileID: 0}
-  player: {fileID: 6213581897068693761}
-  rend: {fileID: 0}
---- !u!114 &3256759586476805460
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213581897068693761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 431d80d8eabf07b47b6c870c127eaada, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 100
-  attack: 20
---- !u!114 &7312278410260382269
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213581897068693761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4073a56228e6d0c46b7522d2b9e1b63e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  attackRange: 2
-  attackLayer:
-    serializedVersion: 2
-    m_Bits: 512
-  damage: 10
 --- !u!65 &7599089367882081555
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -666,52 +593,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1.5774484, z: 2.4869156}
   m_Center: {x: 0, y: 0.28872418, z: -0.1308899}
---- !u!114 &265875537204034501
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213581897068693761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76bb6add5bf3cdf4ca076bbd99033057, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particlePrefab: {fileID: 4881293977272286202, guid: 121dff3289e2ff240b86a0fde9ff277a, type: 3}
-  fadeOutTime: 3
---- !u!114 &8959695205177911821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213581897068693761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 038baccdc4ddaec42bb9cb4260ff8ca8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healAmount: 20
-  pollenParticle: {fileID: 4881293977272286202, guid: 3148610b385d4be408f187e80f9a9cce, type: 3}
-  isReady: 1
-  cooldownTime: 8
-  fadeOutTime: 8
---- !u!114 &3814014782657439282
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213581897068693761}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 98655bdacb4a5924cbefa6cc682277c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  honeyBallPrefab: {fileID: 5023509867703446306, guid: 60a8b3dbdeb4e874588c44ee718c0768, type: 3}
-  shootPoint: {fileID: 61771645153997492}
-  shootForce: 500
 --- !u!1 &6260153615414610513
 GameObject:
   m_ObjectHideFlags: 0
